@@ -73,7 +73,12 @@ class TeqaniRewards {
   static TeqaniRewardsTheme get theme =>
       _theme ?? TeqaniRewardsTheme.defaultTheme;
 
-  static StorageManager get storageManager => _storageManager!;
+  static StorageManager get storageManager {
+    if (_storageManager == null) {
+      throw Exception('TeqaniRewards is not initialized. Call TeqaniRewards.init() first.');
+    }
+    return _storageManager!;
+  }
 
   static FirebaseAnalytics? get analytics => _analytics;
 
