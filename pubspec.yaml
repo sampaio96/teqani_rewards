@@ -45,6 +45,10 @@ dev_dependencies:
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
+dependency_overrides:
+  # Force pointycastle to the version ObjectBox needs
+  pointycastle: ^4.0.0
+
 # The following section is specific to Flutter packages.
 flutter:
 
